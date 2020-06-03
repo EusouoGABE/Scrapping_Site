@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+      label{
+        font-weight: bold;
+      }
+</style>
+<form method="POST">
+    {{ form.csrf_token }}
+    <div class="card-body">
+        <label class="label">Lista de Sites: </label>
+        {{form.link(class="form-control")}}
+    </div>
+
+    <div align="center" class="btn-extrair">
+        <button class="btn btn-success" value="Extrair" type="submit" value="Extrair">
+
+
+                <img src="static/img/extrair-icon.png" align="center" >
+                <a class="texto-btn">Extrair</a>
+
+         </button>
+    </div>
+
+</form>
+
+{% endblock %}
